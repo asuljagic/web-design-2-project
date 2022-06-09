@@ -10,7 +10,13 @@ const User = require("./model/User");
 
 app.set("view engine", "ejs");
 /*connectDB();*/
-mongoose.connect("mongodb+srv://asuljagic1:sarajevo2022@clusterwebdes2.aihhbit.mongodb.net/?retryWrites=true&w=majority");
+mongoose.connect(
+  process.env.MONGO_URL,
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  () => {
+    console.log('Connected to MongoDB');
+  }
+);
 
 app.use(express.static("public"));
 app.use(express.json());
