@@ -1,6 +1,5 @@
 const express = require("express");
 const connectDB = require("./db");
-const mongoose = require("mongoose");
 const app = express();
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
@@ -9,14 +8,8 @@ const PORT = process.env.PORT || 5000;
 const User = require("./model/User");
 
 app.set("view engine", "ejs");
-/*connectDB();*/
-mongoose.connect(
-  process.env.MONGO_URL,
-  { useNewUrlParser: true, useUnifiedTopology: true },
-  () => {
-    console.log('Connected to MongoDB');
-  }
-);
+connectDB();
+
 
 app.use(express.static("public"));
 app.use(express.json());
