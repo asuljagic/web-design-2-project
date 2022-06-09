@@ -1,5 +1,6 @@
 const express = require("express");
-const connectDB = require("./db.js");
+const connectDB = require("./db");
+const mongoose = require("mongoose");
 const app = express();
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
@@ -8,7 +9,8 @@ const PORT = process.env.PORT || 5000;
 const User = require("./model/User");
 
 app.set("view engine", "ejs");
-connectDB();
+/*connectDB();*/
+mongoose.connect("mongodb+srv://asuljagic1:sarajevo2022@clusterwebdes2.aihhbit.mongodb.net/?retryWrites=true&w=majority");
 
 app.use(express.static("public"));
 app.use(express.json());
