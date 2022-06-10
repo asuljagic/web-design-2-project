@@ -11,4 +11,4 @@
 1. Clone the repo. 
 2. Run `npm install`
 3. Run `node server.js`
-4. Server will be running at `locahost:5000`
+4. Server is live on https://web-design-2.herokuapp.com/
