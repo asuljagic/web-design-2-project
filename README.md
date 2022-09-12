@@ -11,4 +11,4 @@
 1. Clone the repo. 
 2. Run `npm install`
 3. Run `node server.js`
-4. Server is live on https://web-design-2.herokuapp.com/
+4. Server is live on https://web-design-app.onrender.com/
